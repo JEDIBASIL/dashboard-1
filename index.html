@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Cart Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* style.css */
+      body {
+        font-family: sans-serif;
+        margin: 40px;
+      }
+
+      header {
+        text-align: center;
+      }
+
+      .cart-table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      .cart-table th,
+      .cart-table td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .cart-table th {
+        background-color: #f2f2f2;
+      }
+
+      .cart-table img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+      }
+
+      .cart-table button {
+        background-color: #f00;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .cart-buttons {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .cart-buttons .button {
+        background-color: #4caf50; /* Green */
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+
+      /* Responsiveness */
+      @media (max-width: 800px) {
+        .cart-table {
+          display: block;
+        }
+
+        .cart-table tr {
+          display: flex;
+          flex-wrap: wrap;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Your Cart</h1>
+    </header>
+
+    <main>
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img src="http://localhost:3001/_next/image?url=https%3A%2F%2Fs.alicdn.com%2F%40sc04%2Fkf%2FHTB1hfSFSFXXXXabXXXXq6xXFXXXv.jpg_960x960.jpg&w=1920&q=75" alt="Product 1" />
+              <p>Product Name 1</p>
+            </td>
+            <td>$19.99</td>
+            <td>
+              <input type="number" value="2" />
+            </td>
+            <td>$39.98</td>
+            <td><button>Remove</button></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="4" class="text-right">Subtotal:</td>
+            <td>$39.98</td>
+          </tr>
+          <tr>
+            <td colspan="4" class="text-right">Shipping:</td>
+            <td>$5.00</td>
+          </tr>
+          <tr>
+            <td colspan="4" class="text-right">Total:</td>
+            <td>$44.98</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <div class="cart-buttons">
+        <a href="#" class="button">Continue Shopping</a>
+        <button class="button">Proceed to Checkout</button>
+      </div>
+    </main>
+  </body>
+</html>

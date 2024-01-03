@@ -1,0 +1,113 @@
+.sidebar{
+    background-color: var(--bg-2);
+    min-width: 270px;
+    height: 100vh;
+    width: 250px;
+    border-right: 1px solid var(--br-1);
+    // background-color: rgb(148, 65, 225);
+    z-index: 3;
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    padding-top: 10px;
+    transition: 0.3s ease-in-out;
+    *{
+        list-style: none;
+    }
+    .logo{
+        margin-bottom: 10px;
+        a{
+            font-size: 24px;
+            text-decoration: none;
+            color: rgb(148, 65, 225);
+            font-weight: 800;
+        }
+    }
+    .user_profile{
+        border: 1px solid var(--br-1);
+        padding: 10px;
+        border-radius: 5px;
+        background-color: var(--bg);
+    }
+    menu{
+        margin-top: 20px;
+        h5{
+            color: var(--color-3);
+        }
+        ul{
+            margin-top: 5px;
+            li{
+                margin-bottom: 5px;
+                font-size: 14px;
+                svg{
+                    font-size: 14px;
+                }
+                &:nth-child(1){
+                    a{
+                        // background-color: royalblue;
+                        // color: white;
+                    }
+                }
+            }
+            a{
+                display: flex;
+                text-decoration: none;
+                align-items: center;
+                gap: 12px;
+                font-weight: 500;
+                color: var(--color-2);
+                border-radius: 5px;
+                padding: 5px 10px;
+                &.active{
+                    background-color: royalblue;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    &.minimized{
+        max-width: 70px;
+        width: 70px;
+        min-width: 70px;
+        overflow: hidden;
+        padding-left: 10px;
+        .logo{
+            display: none;
+        }
+        .user_profile{
+            padding:5px;
+            width: max-content;
+            .details{
+                display: none;
+            }
+        }
+        menu{
+            h5{
+                text-align: center;
+            }
+            ul{
+                li{
+                    a{
+                        span{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .sidebar{
+        position: fixed;
+        transition: 0.3s ease-in-out;
+        transform: translateX(-270px);
+
+        z-index: 5;
+        &::before{
+            width: 100vw;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.add_product_container{
+    .add_product_content{
+        width: calc(100% - 40px);
+        margin: 0px auto;
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin-top: 10px;
+        gap: 20px;
+        .fields,.images_container{
+            padding: 20px;
+            border: 1px solid var(--br-1);
+            background-color: var(--bg-2);
+            border-radius: 10px;
+            height: max-content;
+            min-height: 200px;
+        }
+    }
+}

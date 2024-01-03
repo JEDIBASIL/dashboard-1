@@ -1,0 +1,15 @@
+.orders_container{
+    .orders_content{
+        background-color: var(--bg-2);
+        padding: 20px;
+        border: 1px solid var(--br-1);
+        width: calc(100% - 40px);
+        margin: 0px auto;
+        border-radius: 10px;
+        margin-top: 10px;
+        a{
+            color: var(--color-1);
+            text-decoration: none;
+        }
+    }
+}

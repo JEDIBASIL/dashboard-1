@@ -1,0 +1,37 @@
+.notification_container .page_content {
+  padding: 20px;
+  width: calc(100% - 40px);
+  margin: 0px auto;
+}
+.notification_container .page_content .notification_content {
+  width: 100%;
+  background-color: var(--bg-2);
+  padding: 20px 0px;
+  border: 1px solid var(--br-1);
+  border-radius: 8px;
+}
+.notification_container .page_content .notification_content .list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--br-1);
+  padding: 10px 15px;
+  min-height: 50px;
+  cursor: pointer;
+}
+.notification_container .page_content .notification_content .list .message p {
+  font-size: 14px;
+  font-weight: 500;
+}
+.notification_container .page_content .notification_content .list .date_action_container .date {
+  font-size: 13px;
+}
+.notification_container .page_content .notification_content .list .date_action_container .actions {
+  display: none;
+}
+.notification_container .page_content .notification_content .list:hover .date_action_container .date {
+  display: none;
+}
+.notification_container .page_content .notification_content .list:hover .date_action_container .actions {
+  display: flex;
+}
